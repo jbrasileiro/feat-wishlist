@@ -1,0 +1,5 @@
+{
+	"description": "List of product could not be empty",
+	"status": 422,
+	"path": "/wishlist/000000000000000000000000/product"
+}

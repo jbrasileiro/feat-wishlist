@@ -1,0 +1,15 @@
+{
+	"id": {
+		"timestamp": 1711541839,
+		"date": "2024-03-27T12:17:19.000+00:00"
+	},
+	"nome": "Wishlist example",
+	"client": {
+		"id": {
+			"timestamp": -1717986919,
+			"date": "2051-08-30T03:52:57.000+00:00"
+		},
+		"nome": "client example #999999999999999999999999"
+	},
+	"products": []
+}

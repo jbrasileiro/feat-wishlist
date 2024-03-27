@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  web:
+    env_file:
+      - docker/docker.env
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    hostname: web
+    profiles: ["local"]
+    ports:
+     - "8080:8080"
+     - "5000:5000"
+    environment:
+      JAVA_OPTS: "-Djava.security.egd=file:/dev/./urandom"
+    depends_on:
+      - db
+    command: ["java", "-agentlib:jdwp=transport=dt_socket,address=*:5000,server=y,suspend=n", "-jar", "/application.jar"] 
+
+ 
+  db:
+    image: mongo:7.0.7
+    volumes:
+      - .docker/mongodb:/data/db
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: mongo
+      MONGO_INITDB_ROOT_PASSWORD: mongo

@@ -1,0 +1,5 @@
+{
+	"description": "Couldn't find Client with ID [000000000000000000000000]",
+	"status": 422,
+	"path": "/client/000000000000000000000000"
+}
